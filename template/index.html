@@ -1,0 +1,173 @@
+{% extends 'home.html' %}
+{% block body %}
+
+
+            <!-- Header-->
+            <header class="bg-dark py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-4 col-xxl-6">
+                            <div class="my-5 text-center text-xl-start" >
+                                <h1 class="display-5 fw-bolder text-white mb-2">High Available cPanel web cluster</h1>
+
+
+                                    <p class="lead fw-normal text-start text-white-50 mb-4"><i class="fa fa-bullhorn" aria-hidden="true" style="font-size:15px;color: #ff780b;"></i>&nbsp Inbuilt DNS loadbalancer</p>
+                                    <p class="lead fw-normal text-start text-white-50 mb-4"><i class="fa fa-bullhorn" aria-hidden="true" style="font-size:15px;color: #ff780b;"></i>&nbsp High available Web Stack</p>
+                                    <p class="lead fw-normal text-start text-white-50 mb-4"><i class="fa fa-bullhorn" aria-hidden="true" style="font-size:15px;color: #ff780b;"></i>&nbsp High available MYSQL</p>
+
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-lg px-4 me-sm-3" style="color: white;background-color:#ff780b;border-color: #ff780b;" href="https://support.gnusys.net/order.php?step=1&productGroup=8">Get Started</a>
+                                    <a class="btn btn-outline-light btn-lg px-4" href="/faq">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="{{ url_for('static',filename='images/newimg.jpeg') }}" alt="..." /></div>
+                    </div>
+                </div>
+            </header>
+            <!-- Features section-->
+
+
+            <section class="py-5" id="features">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">A novel approach to web application clustering.</h2></div>
+                        <div class="col-lg-8">
+                            <div class="row gx-5 row-cols-1 row-cols-md-2">
+                                <div class="col-lg-6 mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                                    <h2 class="h5">Practical and Easy</h2>
+                                    <p class="mb-0">Autom8n cPanel Clustering does not require costly hardware or software. The fully automated setup can be easily done on two different virtual machines or dedicated hardware.</p>
+                                </div>
+                                <div class="col-lg-6 mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                                    <h2 class="h5">Multi Data Center Support</h2>
+                                    <p class="mb-0">Autom8n cPanel Cluster nodes can be set up across multiple data centers and provide the best availability. Inter node communication is secure and encrypted.</p>
+                                </div>
+                                <div class="col-lg-6 mb-5 mb-md-0 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <h2 class="h5">Fully Managed Solution</h2>
+                                    <p class="mb-0">With 24x7 monitoring and on-call support. We will ensure that you are covered in all emergencies. Autom8n software plans are all fully managed, including installation.</p>
+                                </div>
+                                <div class="col-lg-6 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <h2 class="h5">Extending cPanel </h2>
+                                    <p class="mb-0">Apart from high availability and scalability to cPanel web stack Autom8n integrates Nginx webserver, Borg backup and Netdata monitoring for the best hosting experience. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- test -->
+
+
+            <!-- Testimonial section-->
+
+
+            <div class="py-5" style="background: url({{ url_for('static', filename='images/bgimg2.png') }}) no-repeat center">
+                <div class="container px-5 my-5">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" ><br>
+                      <!-- <ol class="carousel-indicators">
+
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"> </li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"> </li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"> </li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"> </li>
+
+
+
+                        <br style="clear: both;">
+                      </ol> -->
+                      <!-- <br> -->
+                      <div class="carousel-inner">
+
+
+                        <div class="carousel-item active">
+                          <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-10 col-xl-7">
+                                <div class="text-center">
+                                    <div class="fs-4 mb-4 fst-italic">"I use this plugin for more than 24 months now on several servers, and I'm delighted with all features that have been added all along this time."<br><br><br></div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <!-- <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="First Slide" /> -->
+                                      <div class="fw-bold">
+                                          Johann Carnevali
+                                          <span class="fw-bold text-primary mx-1">/</span>
+                                          <a href="https://www.yoorshop.hosting/">yoorshop.hosting</a>
+
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                         <div class="carousel-item">
+                          <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-10 col-xl-7">
+                                <div class="text-center">
+                                      <div class="fs-4 mb-4 fst-italic">"The service provided by Autom8n is Top Notch, I promise you won't find another service with this type of support. Period!"<br><br><br></div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <!-- <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="Second Slide" /> -->
+                                      <div class="fw-bold">
+                                          Spiro G
+                                          <span class="fw-bold text-primary mx-1"></span>
+
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-10 col-xl-7">
+                                <div class="text-center">
+                                    <div class="fs-4 mb-4 fst-italic">"Magnificent support"<br><br><br><br><br></div>
+
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <!-- <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="Third Slide" /> -->
+                                      <div class="fw-bold">
+                                          Vincenzo Corteselli
+                                          <span  class="fw-bold text-primary mx-1">/</span>
+                                          <a href="https://ispcloud.it/">ispcloud.it</a>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-10 col-xl-7">
+                                <div class="text-center">
+                                    <div class="fs-4 mb-4 fst-italic">"We wouldn’t be able to support the growth of our web development agency without the technical knowledge, support, professionalism and personable, friendly manner of the team at Autom8n. We can’t speak more highly of Anoop and his team"</div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <!-- <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="Third Slide" /> -->
+                                      <div class="fw-bold">
+                                          Robert Jennings- Director We Push Buttons
+                                          <span  class="fw-bold text-primary mx-1">/</span>
+                                          <a href="https://wepushbuttons.com.au/">We Push Buttons</a>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        {% endblock %}

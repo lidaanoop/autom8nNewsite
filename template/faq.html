@@ -1,0 +1,161 @@
+{% extends 'home.html' %}
+{% block body %}
+            <!-- Page Content-->
+            <section class="py-5">
+                <div class="container px-5 my-5">
+                    <div class="text-center mb-5">
+                        <h1 class="fw-bolder">Frequently Asked Questions</h1>
+                        <p class="lead fw-normal text-muted mb-0">How can we help you?</p>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-xl-8">
+                            <!-- FAQ Accordion 1-->
+                            <h2 class="fw-bolder mb-3">Installation</h2>
+                            <div class="accordion mb-5" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">System Requirements</button></h3>
+                                    <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>Supported OS:</strong>
+                                            CentOS 7, Cloud linux 7, Alma linux 8, Cloud linux 8
+                                            <br>
+                                            <strong>Master node:</strong>
+                                            cPanel full version.<br>
+                                            <strong>Slave node:</strong>
+                                            cPanel DNS only<br>
+                                            <strong>Supported database:</strong>
+                                            MariaDB 10.x
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">What doesn't work?</button></h3>
+                                    <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>1.</strong>
+                                            IPV6 address when using Geo DNS Load balancer.<br>
+                                            <strong>2.</strong>
+                                            Cloud Linux PHP selector when using Cloud Linux OS.<br>
+                                            <strong>3.</strong>
+                                            MYSQL governor when using Cloud Linux OS.<br>
+                                            <!-- <code>.accordion-body</code>
+                                            , though the transition does limit overflow. -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How does the cluster work?</button></h3>
+                                    <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+
+                                            Autom8n Cluster has three components<br>
+                                              <strong>1.</strong>
+                                              Two way file synchronization using unison.<br>
+                                              <strong>2.</strong>
+                                              Two way database synchronization using MYSQL master master replication.<br>
+                                              <strong>3.</strong>
+                                              Configuration synchronization using csync 2<br>
+                                              Using the above tools Autom8n creates replicas of the web application across multiple servers. You can then use the in built DNS load balancer or an external http load balancer to load balance connection among these servers. The servers act as active-active and connections can easily fail over to the available nodes when one of the replica is down.
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header" id="headingFour"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Why only managed Plans?</button></h3>
+                                    <div class="accordion-collapse collapse" id="collapseFour" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+
+                                            Setting up a cluster is bit more involved than setting up a standalone server. There is also a steep learning curve. Due to the above two reasons we only provide fully managed services which includes installation/setup. The plans also come included with 24x7 monitoring of the cluster components and replication status.<br>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header" id="headingFive"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">DNS Loadbalancing Topology</button></h3>
+                                    <div class="accordion-collapse collapse" id="collapseFive" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                          <strong>  1.  Round Robin DNS load balancing </strong> - Autom8n sets up multiple A Records for the DNS resources in this topology. This is done on the existing bind/powerDNS DNS service. This is compactable with cPanel DNS clustering too.<br>
+                                          <strong>  2.   Geo DNS Loadbalancing </strong> - Autom8n sets up specialized GDNSD software that does geographic loadbalancing and failover. This is superior to Round Robin DNS load balancing as it uses server side failover.
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header" id="headingSix"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">Can I use the external loadbalancing</button></h3>
+                                    <div class="accordion-collapse collapse" id="collapseSix" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                          Yes, you can use an external load balancer but note that Autom8n will not configure the external load balancer and this must be done manually.
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Accordion 2-->
+                            <!-- <h2 class="fw-bolder mb-3">Website Issues</h2>
+                            <div class="accordion mb-5 mb-xl-0" id="accordionExample2">
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Accordion Item #1</button></h3>
+                                    <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
+                                        <div class="accordion-body">
+                                            <strong>This is the first item's accordion body.</strong>
+                                            It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                                            <code>.accordion-body</code>
+                                            , though the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Accordion Item #2</button></h3>
+                                    <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample2">
+                                        <div class="accordion-body">
+                                            <strong>This is the second item's accordion body.</strong>
+                                            It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                                            <code>.accordion-body</code>
+                                            , though the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Accordion Item #3</button></h3>
+                                    <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample2">
+                                        <div class="accordion-body">
+                                            <strong>This is the third item's accordion body.</strong>
+                                            It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                                            <code>.accordion-body</code>
+                                            , though the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="card border-0 bg-light mt-xl-5">
+                                <div class="card-body p-4 py-lg-5">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div class="text-center">
+                                            <div class="h6 fw-bolder">Have more questions?</div>
+                                            <p class="text-muted mb-4">
+                                                Contact us at
+                                                <br />
+                                                <a href="#!">ops@gnusys.net</a>
+                                            </p>
+                                            <div class="h6 fw-bolder">Follow us</div>
+                                            <a class="fs-5 px-2 link-dark" href="https://twitter.com/gnusys"><i class="bi-twitter"></i></a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        {% endblock %}
