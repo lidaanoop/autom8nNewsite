@@ -647,6 +647,12 @@ progress {
     max-width: 540px;
   }
 }
+@media (min-width: 800px) {
+  .col{
+  flex: 0 0 auto;
+  width: 50%;
+  }
+}
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
     max-width: 720px;

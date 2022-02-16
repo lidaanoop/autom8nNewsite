@@ -6,22 +6,22 @@
             <header class="bg-dark py-5">
                 <div class="container px-5">
                     <div class="row gx-5 align-items-center justify-content-center">
-                        <div class="col-lg-8 col-xl-4 col-xxl-6">
+
                             <div class="my-5 text-center text-xl-start" >
                                 <h1 class="display-5 fw-bolder text-white mb-2">High Available cPanel web cluster</h1>
 
 
-                                    <p class="lead fw-normal text-start text-white-50 mb-4"><i class="fa fa-bullhorn" aria-hidden="true" style="font-size:15px;color: #ff780b;"></i>&nbsp Inbuilt DNS loadbalancer</p>
-                                    <p class="lead fw-normal text-start text-white-50 mb-4"><i class="fa fa-bullhorn" aria-hidden="true" style="font-size:15px;color: #ff780b;"></i>&nbsp High available Web Stack</p>
-                                    <p class="lead fw-normal text-start text-white-50 mb-4"><i class="fa fa-bullhorn" aria-hidden="true" style="font-size:15px;color: #ff780b;"></i>&nbsp High available MYSQL</p>
+                                    <p class="lead fw-normal text-white-50 mb-4"><i class="fa fa-bullhorn" aria-hidden="true" style="font-size:15px;color: #ff780b;"></i>&nbsp Inbuilt DNS loadbalancer</p>
+                                    <p class="lead fw-normal text-white-50 mb-4"><i class="fa fa-bullhorn" aria-hidden="true" style="font-size:15px;color: #ff780b;"></i>&nbsp High available Web Stack</p>
+                                    <p class="lead fw-normal text-white-50 mb-4"><i class="fa fa-bullhorn" aria-hidden="true" style="font-size:15px;color: #ff780b;"></i>&nbsp High available MYSQL</p>
 
-                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-center">
                                     <a class="btn btn-lg px-4 me-sm-3" style="color: white;background-color:#ff780b;border-color: #ff780b;" href="https://support.gnusys.net/order.php?step=1&productGroup=8">Get Started</a>
                                     <a class="btn btn-outline-light btn-lg px-4" href="/faq">Learn More</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-8 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="{{ url_for('static',filename='images/newimg.jpeg') }}" alt="..." /></div>
+
+
                     </div>
                 </div>
             </header>
@@ -65,8 +65,8 @@
 
             <!-- Testimonial section-->
 
-
-            <div class="py-5" style="background: url({{ url_for('static', filename='images/bgimg2.png') }}) no-repeat center">
+            <section class="py-5" id="features" style="background: url({{ url_for('static', filename='images/bgimg2.png') }}) no-repeat center; background-size: 100%;">
+              <div class="py-5" >
                 <div class="container px-5 my-5">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" ><br>
                       <!-- <ol class="carousel-indicators">
@@ -167,6 +167,7 @@
                     </div>
                 </div>
             </div>
+            </section>
 
 
 
