@@ -653,6 +653,11 @@ progress {
   width: 50%;
   }
 }
+@media (max-width: 454px) {
+  a.navbar-brand {
+  margin-right: 0rem;
+  }
+}
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
     max-width: 720px;
