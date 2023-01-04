@@ -1,7 +1,7 @@
 {% extends 'home.html' %}
 {% block body %}
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
            <div class="row mt-5">
               <div class="col-sm-6 mt-5">
                   <img src="{{ url_for('static', filename='images/redisnew.png') }}" alt="Redis_Image" class="left">
@@ -11,10 +11,10 @@
               </div>
 
                 <hr width="100%" height="10px" color="red" />
-                <div class="border mt-3" style="background: #f2f2f2;">
+                <div class="border mt-5" style="background: #f2f2f2;">
 
 
-<h5>What is Redis?</h5>
+<h5 class="mt-5">What is Redis?</h5>
 
 <p class="para">Redis is an open-source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker. Since it is in-memory it can be used as a cache backend for web applications to speed up the web application.
 
@@ -55,7 +55,7 @@ pro: 128mb</kbd></p>
 
 
 
-<p class="para"><i>Running separate Redis instance consume memory. Please take into consideration the memory requirement especially if there are a lot of users on the server. <br>The Redis max memory for the default plan can be adjusted accordingly
+<p class="para mb-5" style="font-size: small; font-style: italic;"><i>Running separate Redis instance consume memory. Please take into consideration the memory requirement especially if there are a lot of users on the server. The Redis max memory for the default plan can be adjusted accordingly<br>
 
 <b>Autom8n "enterprise" plan subscription</b> entails unlimited licenses for <b>Autom8Redis</b>. Please contact <b>ops@gnusys.net</b>, if you need additional servers licensed</i></p>
             </div>
