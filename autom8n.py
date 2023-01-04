@@ -20,6 +20,10 @@ def docs():
 def contactus():
     return render_template("contact.html")
 
+@app.route("/autom8redis")
+def autom8redis():
+    return render_template("autom8redis.html")
+
 
 
 if __name__ == "__main__":

@@ -1,0 +1,70 @@
+{% extends 'home.html' %}
+{% block body %}
+
+<div class="container mt-5">
+           <div class="row mt-5">
+              <div class="col-sm-6 mt-5">
+                  <img src="{{ url_for('static', filename='images/redisnew.png') }}" alt="Redis_Image" class="left">
+              </div>
+              <div class="col-sm-6 center mt-5">
+                  <h1 class="mt-5">Autom8Redis</h1>
+              </div>
+
+                <hr width="100%" height="10px" color="red" />
+                <div class="border mt-3" style="background: #f2f2f2;">
+
+
+<h5>What is Redis?</h5>
+
+<p class="para">Redis is an open-source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker. Since it is in-memory it can be used as a cache backend for web applications to speed up the web application.
+
+For example, the popular CMS WordPress can use <link>https://wordpress.org/plugins/redis-cache/ </link> to speed up page render.</p>
+
+<h5>What is the problem with a standard Redis instance setup in the cPanel server shared by all users?</h5>
+
+
+<p class="para">Standard Redis setup uses a single server instance shared by all web applications without password authentication. This is insecure as all data in the Redis server gets shared between all users and is not recommended in shared hosting
+
+<b>Autom8Redis</b></p>
+
+<h5>Autom8Redis</h5>
+
+<p class="para"><b>Autom8Redis</b> automates the start/stop of a <b>private Redis</b> instance for each user, which can be managed by the user from his cPanel UI. This <b>private Redis</b> instance is only available to the user using Unix Domain Socket under his home directory and is therefore secure
+
+This private Redis daemon will run under the user/group credentials and the max memory of this Redis instance can be set according to the cPanel hosting plan for the user</p>
+
+<p class="para">The plugin along with technical support is readily available for installation with your <b>Autom8n subscription</b>. </p>
+<h5>Please follow the steps listed below to install the plugin</h5>
+
+<p class="para"><kbd class=""style="background-color: #666699">yum -y install https://github.com/AnoopAlias/AUTOM8N/raw/ndeploy4/nDeploy-release-centos-1.0-8.noarch.rpm<br>
+
+yum -y --enablerepo=autom8redis install Autom8Redis</kbd><br></p>
+
+
+
+<p class="para">To set max memory for each user according to the cPanel hosting plan. Add  PLAN_NAME: memory in the file<kbd style="background-color: #666699">/opt/Autom8Redis/plan_memory.yaml </kbd>. For example, if you provide 2 plans -  starter, pro, and each need a separate memory limit, it can be added as below.
+
+The default plan is used for all other users whose hosting plan is not mentioned specifically</p>
+
+<p class="para"><kbd style="background-color: #666699">cat /opt/Autom8Redis/plan_memory.yaml<br>
+
+default: 32mb<br>
+
+starter: 64mb<br>
+
+pro: 128mb</kbd></p>
+
+
+
+<p class="para"><i>Running separate Redis instance consume memory. Please take into consideration the memory requirement especially if there are a lot of users on the server. <br>The Redis max memory for the default plan can be adjusted accordingly
+
+<b>Autom8n "enterprise" plan subscription</b> entails unlimited licenses for <b>Autom8Redis</b>. Please contact <b>ops@gnusys.net</b>, if you need additional servers licensed</i></p>
+            </div>
+            </div>
+            </div>
+
+
+</main>
+
+<!-- Footer-->
+{% endblock %}
