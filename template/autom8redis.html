@@ -63,7 +63,31 @@ pro: 128mb</kbd></p>
     <a class="btn btn-lg px-4 me-sm-3" style="color: white;background-color:#ff780b;border-color: #ff780b;" href="https://support.gnusys.net/order.php?step=1&productGroup=9">Subscribe Now</a>
 
 </div>
-            </div>
+<h5 class="mt-5">How to use Redis Cache with Wordpress and <b>Autom8Redis</b>?</h5>
+<h4><b>Step:1</b></h4>
+<p  class="para"> Install <b>Redis Object Cache</b> Plugin and enable</p>
+<div align="center" style="margin-bottom: 1rem;"><img src="{{ url_for('static', filename='images/plugin17.png') }}" alt="A descriptive text about the image" width="75%" height="75%"></div>
+<p  class="para"> Upon enabling it will show <b>status : Not connected</b></p>
+<h4><b>Step:2</b></h4>
+<p  class="para"> Turn ON <b>Redis</b> from <b>Autom8Redis</b> plugin</p>
+<div align="center" style="margin-bottom: 1rem;"><img src="{{ url_for('static', filename='images/plugin13.png') }}" alt="A descriptive text about the image" width="75%" height="75%"></div>
+<p  class="para"> Copy the path to Redis socket</p>
+<div align="center" style="margin-bottom: 1rem;"><img src="{{ url_for('static', filename='images/plugin14.png') }}" alt="A descriptive text about the image" width="75%" height="75%"></div>
+<h4><b>Step:3</b></h4>
+<p  class="para"> Add the following setting in <b>wp-config.php</b> file (Change the socket path to the one you copied)</p>
+<p  class="para"> <kbd  style="background-color: #666699">define( 'WP_REDIS_SCHEME', 'unix' );<br>
+define( 'WP_REDIS_PATH', '/home/automa8n/tmp/redis.sock' );<br>
+define( 'WP_REDIS_DATABASE', '0');</kbd></p>
+<div align="center" style="margin-bottom: 1rem;"><img src="{{ url_for('static', filename='images/plugin15.png') }}" alt="A descriptive text about the image" width="75%" height="500px"></div>
+
+<p class="para"> <b>Autom8nRedis</b> provide six database by dafault numbered 0,1,2,3,4,5. You can use any of these in the parameter WP_REDIS_DATABASE</p>
+<h4><b>Step:4</b></h4>
+<p class="para"> Enable Redis Object Cache </p>
+<div align="center" style="margin-bottom: 1rem;"><img src="{{ url_for('static', filename='images/plugin16.png') }}" alt="A descriptive text about the image" width="75%" height="500px"></div>
+<div align="center" style="margin-bottom: 1rem;"><img src="{{ url_for('static', filename='images/plugin11.png') }}" alt="A descriptive text about the image" width="75%" height="75%"></div>
+
+
+        </div>
 
 
             </div>
